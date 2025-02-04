@@ -8,13 +8,14 @@
 </head>
 
 <body>
-    <h1>Connor's Website</h1>
-    <style>
-        h1 {
-            text-align: center;
-        }
-    </style>
-    <button onclick="changeBackground()">Change Background</button>
+    <h1 style="text-align: center">Connor's Website</h1>
+
+    <div style="text-align: center;">
+        <input type="text" id="textInput" placeholder="Enter text: " style="display: block; margin: 0 auto;">
+        <button onclick="updateHeading()">Update Title</button>
+    </div>
+    
+    <button style="display: block; margin: 0 auto;" onclick="changeBackground()">Change Background</button>
     <script>
         function changeBackground() {
             const colors = [
@@ -38,6 +39,12 @@
         }
         document.querySelector('button').style.display = 'block';
         document.querySelector('button').style.margin = '0 auto';
+
+        function updateHeading() {
+            const newText = document.getElementById('textInput').value;
+            document.querySelector('h1').textContent = newText;
+        }
+        changeBackground();
     </script>
 </body>
 
