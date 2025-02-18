@@ -12,6 +12,10 @@
     --dark-purple: #110815;
     --light-grey: #efefef;
 }
+nav {
+    text-align: left;
+    margin-left: 50px;
+}
 
 body {
     background-color: var(--dark-purple);

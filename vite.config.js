@@ -9,7 +9,7 @@ export default defineConfig({
                 main: resolve(__dirname, "index.html"),
                 freeCodeCamp: resolve(__dirname, "freeCodeCamp/index.html"),
                 connorsWebsite: resolve(__dirname, "connorsWebsite/index.html"),
-                thirdPage: resolve(__dirname, "thirdPage/index.html"),
+                palindrome: resolve(__dirname, "palindrome/index.html"),
             }
         }
     }
