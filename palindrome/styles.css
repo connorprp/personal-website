@@ -11,6 +11,9 @@ h1 {
 
 body {
   font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background-color: rgb(24, 71, 113);
 }
 
 a {
