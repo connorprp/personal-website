@@ -1,0 +1,3 @@
+-make the result payout always sort fromm first to last correctly --maybe not necessary?
+-find closest even dollar amount divisable payout number to desired payout percentage DONE
+-fix background, maybe float elements to stay on the static window

@@ -9,6 +9,7 @@
     z-index: -1;
     margin-left: -10px;
     margin-top: -20px;
+    background-repeat: repeat-y;
 }
 
 body {
@@ -16,9 +17,26 @@ body {
     font-family: "Montserrat";
 }
 
+button {
+    margin: auto auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(190, 188, 51);
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    width: auto;
+}
+
+button:hover {
+    background-color: rgb(163, 161, 18);
+}
+
 #table {
     margin: auto auto;
     text-align: center;
+    margin-bottom: 20px;
     border-spacing: 20px;
     background-color: lightgrey;
     padding: 20px;
@@ -30,7 +48,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     background-color: lightgrey;
     padding: 20px;
     border-radius: 10px;
@@ -61,4 +79,53 @@ nav {
     background: gray;
     width: 100%;
     font-family: Arial, sans-serif;
+}
+
+#numPlaces {
+    margin: auto auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(190, 188, 51);
+    padding: 6px;
+    border-radius: 10px;
+    width: auto;
+}
+
+.text {
+    margin: auto auto;
+    margin-top: 20px auto;
+    margin-bottom: 0px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 6px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#potAmount {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#potAmount:hover {
+    background-color: lightgrey;
+}
+
+[id^="place"] {
+    margin: auto auto;
+    margin-top: 20px auto;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+[id^="place"]:hover {
+    background-color: lightgrey;
 }

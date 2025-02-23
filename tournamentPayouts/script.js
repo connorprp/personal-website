@@ -7,12 +7,12 @@ const clearBtn = document.getElementById('clear');
 
 document.addEventListener("DOMContentLoaded", () => { updateNumAllocs(numPlacesInput.value); });
 numPlacesInput.addEventListener('change', () => { updateNumAllocs(numPlacesInput.value) });
-submit.addEventListener("click", () => { getInput() });
-clearBtn.addEventListener("click", () => { 
-    table.innerHTML = ""; 
-    result.setAttribute('hidden', 'true'); 
-    table.setAttribute('hidden', 'true'); 
-    numPlacesInput.value = 1; 
+submit.addEventListener("click", () => { getInput(); });
+clearBtn.addEventListener("click", () => {
+    table.innerHTML = "";
+    result.setAttribute('hidden', 'true');
+    table.setAttribute('hidden', 'true');
+    numPlacesInput.value = 1;
     potAmountInput.value = "";
     updateNumAllocs(1);
 
@@ -54,29 +54,31 @@ const getInput = () => {
 }
 
 const sumArray = (array) => {
-    let sum = 0
+    let sum = 0;
     array.forEach(el => sum += parseInt(el));
     return sum;
-
 }
 
 const calculatePayouts = (array) => {
     let percentArray = array;
     let intArray = [];
-    let final = []
-    array.forEach(el => intArray.push(parseInt(el)));
+    let approximate = []
+    let final = [];
+    let extra = [];
+    array.forEach(el => intArray.push(parseFloat(el)));
     for (let i = 0; i < intArray.length; i++) {
-        final.push((potAmountInput.value / 100) * intArray[i]);
+        approximate.push((potAmountInput.value / 100) * intArray[i]);
     }
-    //intArray.sort().reverse();
-    //console.log(intArray);
-    //final.sort().reverse();
-    //console.log(final);
-    updateResult(intArray, final);
+    approximate.forEach(el => {
+        final.push(el - (el - Math.floor(el)));
+        extra.push(el - Math.floor(el));
+    });
+    console.log(sumArray(extra))
+    updateResult(intArray, final, extra);
 }
 
-const updateResult = (intArray, final) => {
-
+const updateResult = (intArray, final, extra) => {
+    table.innerHTML = "";
     const headerRow = document.createElement('tr');
     const placeHeader = document.createElement('th');
     placeHeader.textContent = 'Place';
@@ -109,5 +111,6 @@ const updateResult = (intArray, final) => {
     }
     result.removeAttribute('hidden');
     table.removeAttribute('hidden');
-    result.textContent = `Payout total = $${sumArray(final).toFixed(2)}`;
+    console.log(sumArray(extra));
+    result.innerHTML = `Payout total: $${parseFloat(potAmountInput.value).toFixed(2)} <br> Left Over: $${(potAmountInput.value - sumArray(final)).toFixed(2)}`;
 }
