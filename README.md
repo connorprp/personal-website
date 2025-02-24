@@ -1,0 +1,1 @@
+This is a WIP portfolio of personal projects and certification projects created on freeCodeCamp.
