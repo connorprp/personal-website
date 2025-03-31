@@ -7,21 +7,30 @@
   <title>Palindrome Checker</title>
   <script type="module" src="./script.js"></script>
   <link rel="stylesheet" href="./styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="icon" href="../images/icon.jpg">
 </head>
 
 <body>
   <header>
-    <nav>
-      <a href="../">Home</a>
-      <a href="../palindrome/">Palindrome Checker</a>
-      <a href="../connorsWebsite/">Connor's Website</a>
-      <a href="../freeCodeCamp/">Background Color Changer</a>
-      <a href="../certification2/">Roman Numeral Converter</a>
-      <a href="../tournamentPayouts/">Tournament Payouts</a>
-      <a href="../certification3/">Telephone Number Validator</a>
-    </nav>
-  </header>
+    <div class="navbar">
+        <a href="../">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../palindrome/">Palindrome Checker</a>
+            <a href="../connorsWebsite/">Connor's Website</a>
+            <a href="../freeCodeCamp/">Background Color Changer</a>
+            <a href="../certification2/">Roman Numeral Converter</a>
+            <a href="../tournamentPayouts/">Tournament Payouts</a>
+            <a href="../certification3/">Telephone Number Validator</a>
+            <a href="../photoSite/">Photo Portfolio</a>
+          </div>
+        </div>
+      </div>
+</header>
     <h1>Palindrome Checker Project</h1>
     <input id="text-input" type="text" placeholder="Enter text">
     <button id="check-btn">Check</button>
