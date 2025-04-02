@@ -93,6 +93,7 @@ nav {
     width: 100%;
     background-color: #EEB14A;
     border-bottom: #7593CB solid 3px;
+    border-top: #7593CB solid 3px;
     height: 2%;
     display: flex;
     justify-content: center;
