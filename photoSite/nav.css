@@ -1,0 +1,30 @@
+.nav-links {
+    width: 100%;
+    background-color: #EEB14A;
+    border-bottom: #7593CB solid 3px;
+    border-top: #7593CB solid 3px;
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    background-color: #7593CB;
+    transition: font-size 0.3s ease;
+    border-radius: 10px;
+    transition: background-color .3s smooth;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-family: "Tenor Sans", sans-serif;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 0%; /* Add spacing between links */
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s ease;
+}

@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css                *//* empty css            */const o=document.getElementById("view-portfolio");o.addEventListener("click",()=>{window.location.href="./portfolio/"});
