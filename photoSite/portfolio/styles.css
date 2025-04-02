@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,10 +13,115 @@ body {
     text-align: center;
 }
 
-.about,
-.portfolio,
-.contact {
-    padding: 50px 20px;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 80%;
+    height: 20%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    margin-left: -50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.portfolio img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.portfolio h2 {
+    font-family: "Shadows Into Light Two", sans-serif;
+    font-size: 200%;
+    color: #EEB14A;
+    background-color: #7593CB;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .navbar {
@@ -83,6 +196,11 @@ body {
     display: block;
 }
 
+nav {
+    width: 100%;
+}
+
+
 .nav-links {
     width: 100%;
     background-color: #EEB14A;
@@ -93,9 +211,10 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: #C7D1E5;
+    background-color: #7593CB;
     transition: font-size 0.3s ease;
     border-radius: 10px;
+    transition: background-color .3s smooth;
 }
 
 .nav-links a {
@@ -105,7 +224,9 @@ body {
     font-size: 30px;
     padding: 14px 16px;
     text-decoration: none;
-    margin: 0 0.5%; /* Add spacing between links */
+    margin: 0 0%; /* Add spacing between links */
     display: inline-block;
     text-align: center;
+    transition: background-color .3s ease;
 }
+

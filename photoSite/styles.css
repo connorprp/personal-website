@@ -1,4 +1,11 @@
-
+/********Global Rules**********************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -6,58 +13,14 @@ body {
     text-align: center;
     background-color: #FFF7DE;
 }
-
-.about,
-.portfolio,
-.contact {
-    padding: 50px 20px;
-}
-
-.portfolio img {
-    width: 30%;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
-}
-
-.contact input,
-.contact textarea {
-    margin: 10px 0;
-    padding: 10px;
-}
-
-.contact button {
-    padding: 10px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
+/********Main nav**********************/
 .navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
 }
 
-/* Links inside the navbar */
+/* Links */
 .navbar a {
     float: left;
     font-size: 16px;
@@ -67,7 +30,7 @@ body {
     text-decoration: none;
 }
 
-/* The dropdown container */
+/* dropdown container */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -82,18 +45,16 @@ body {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/*red background on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: red;
 }
 
-/* Dropdown content (hidden by default) */
+/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -103,7 +64,7 @@ body {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
+/* links in dropdown */
 .dropdown-content a {
     float: none;
     color: black;
@@ -113,51 +74,25 @@ body {
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* grey background on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-video {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    max-height: 500px;
-    position: relative; /* Ensure the video container is positioned */
-    border-radius: 10px;
-    border: solid 3px #7593CB;
-    border-left: 0px;
-    border-top: 0px;
-}
-
-.video-container {
-    position: relative; /* Set the parent container to relative */
-}
-
-.overlay-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 1; /* Ensure it appears above the video */
-    height: 30%;
-    width: 40%;
 }
 
 nav {
     width: 100%;
 }
 
-
+/******** Local site nav **********************/
 .nav-links {
     width: 100%;
     background-color: #EEB14A;
+    border-bottom: #7593CB solid 3px;
     height: 2%;
     display: flex;
     justify-content: center;
@@ -165,9 +100,10 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: #C7D1E5;
+    background-color: #7593CB;
     transition: font-size 0.3s ease;
     border-radius: 10px;
+    transition: background-color .3s smooth;
 }
 
 .nav-links a {
@@ -177,24 +113,37 @@ nav {
     font-size: 30px;
     padding: 14px 16px;
     text-decoration: none;
-    margin: 0 0.5%; /* Add spacing between links */
+    margin: 0 0%; /* Add spacing between links */
     display: inline-block;
     text-align: center;
+    transition: background-color .3s ease;
+}
+/******** Video title **********************/
+video {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    max-height: 500px;
+    position: relative;
+    border-bottom: solid 3px #7593CB;
+    border-left: 0px;
+    border-top: 0px;
 }
 
-.title {
-    background-color: white;
-    border-radius: 10px;
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 2%;
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 30px;
+.video-container {
+    width: 100%;
+    position: relative;
 }
 
-#about {
-    margin-top: 2%;
-    text-align: left;
+.overlay-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    height: 30%;
+    width: 40%;
 }
 
 #view-portfolio {
@@ -210,9 +159,76 @@ nav {
     color: #EEB14A;
     transition: background-color .75s ease;
 }
-
 #view-portfolio:hover { 
     background-color: #7593CB;
     border-radius: 10px;
     transition: background-color .75s ease;
 }
+/******** Title and about (hero) **********************/
+.title {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 30px;
+}
+
+#title {
+    color: #EEB14A;
+    font-size: larger;
+    margin-bottom: 5%;
+}
+#about {
+    margin-right: 50%;
+    text-align: left;
+    font-family: "Shadows Into Light Two", cursive;
+    color: #7593CB;
+}
+#about-image {
+    width: 60%;
+    float: right;
+    margin-left: 2%;
+    margin-top: -25%;
+}
+/******** insta embed **********************/
+.embed {
+    background-color: white;
+    padding: 5%;
+    margin-right: 12%;
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin-top: -10%;
+}
+/******** Contact form **********************/
+.contact {
+    font-family: "Tenor Sans", sans-serif;
+    background-color: white;
+    padding: 5%;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100%;
+
+}
+.contact input,
+.contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+.contact button {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/******** Footer **********************/
+
+
+
+
