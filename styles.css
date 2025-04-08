@@ -2,14 +2,17 @@
 body {
     background-color: aqua;
 }
+
 h1 {
     font-size: 2.5em;
     margin: 20px 0;
 }
+
 #web-previews {
     margin-bottom: 5%;
     margin-top: 5%;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +27,7 @@ h1 {
 .column img {
     max-width: 20%;
     margin-top: 8px;
+    margin-left: 4px;
     vertical-align: middle;
 }
 

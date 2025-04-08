@@ -12,14 +12,14 @@
 .nav-links a:hover {
     background-color: #7593CB;
     transition: font-size 0.3s ease;
-    border-radius: 10px;
+    
     transition: background-color .3s smooth;
 }
 
 .nav-links a {
     color: #ffffff;
     font-family: "Tenor Sans", sans-serif;
-    border-radius: 10px;
+    
     font-size: 30px;
     padding: 14px 16px;
     text-decoration: none;
