@@ -67,6 +67,10 @@ button:hover {
     width: auto;
 }
 
+#numPlaces option {
+    display: inline;
+}
+
 .text {
     margin: auto auto;
     margin-top: 20px auto;
