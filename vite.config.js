@@ -20,6 +20,7 @@ export default defineConfig({
                 events: resolve(__dirname, "photoSite/events/index.html"),
                 certification4: resolve(__dirname, "certification4/index.html"),
                 certification5: resolve(__dirname, "certification5/index.html"),
+                landscape: resolve(__dirname, "landscape/index.html"),
             }
         }
     }
