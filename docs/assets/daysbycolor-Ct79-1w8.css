@@ -1,1 +1,0 @@
-#year-grid{margin-top:.8vh;margin-left:20px;margin-right:20px}.month{margin-bottom:12px}.label{margin-bottom:6px;font-weight:700}.grid{display:grid;gap:4px;align-items:left}.day{background-color:#d0d0d0;aspect-ratio:1;border-radius:2px;transition:background-color .2s ease}.day:hover{background-color:#464646;opacity:.8}

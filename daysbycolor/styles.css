@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    background: linear-gradient(120deg, #b1b9d4 0%, #7f95b8 100%);
+    /* Soft blue gradient, subtle and not distracting */
+}
 
 #year-grid {
     margin-top: .8vh;
@@ -21,13 +26,111 @@
 }
 
 .day {
-    background-color: #d0d0d0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
     aspect-ratio: 1;
-    border-radius: 2px;
+    border-radius: 15px;
     transition: background-color 0.2s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(189, 157, 157);
 }
 
 .day:hover {
     background-color: #464646;
     opacity: 0.8;
+}
+
+#mainTitle {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 16px 32px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 12px rgba(40, 80, 180, 0.18);
+    text-align: center;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+#mainTitle:hover {
+    box-shadow: 0 6px 24px rgba(40, 80, 180, 0.28);
+    transform: translateY(-2px) scale(1.03);
+}
+
+#instructionsButton {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(40, 80, 180, 0.15);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    margin-left: 5%;
+}
+
+#instructionsButton:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(40, 80, 180, 0.22);
+}
+
+#instructions {
+    position: absolute;
+    font-size: 2em;
+    left: 28vw;
+    background-color: #7f95b8;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    #mainTitle {
+        font-size: 1.6rem;
+        padding: 12px 20px;
+    }
+
+    #instructionsButton {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-left: 10px;
+    }
+
+    #instructions {
+        position: absolute;
+        left: 1vw;
+        font-size: 1.2em;
+        padding: 20px;
+        margin: 10px;
+        width: auto;
+    }
+
+    #year-grid {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+        gap: 4px;
+        align-items: start;
+    }
+
+    .day {
+        font-size: 0.75rem;
+        border-radius: 10px;
+    }
 }

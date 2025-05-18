@@ -34,7 +34,7 @@ const months = [
       day.className = 'day';
       day.title = `${month.name} ${i + 1} (Day ${dayCounter})`;
       day.textContent = i + 1;
-      day.style.fontSize = '0.5em';
+      day.style.fontSize = '1em';
       dayCounter++;
       grid.appendChild(day);
     }
@@ -44,7 +44,7 @@ const months = [
   
   });
   const days = document.querySelectorAll('.day');
-  const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+  const colors = ['#B42603', '#e7e411', '#27295D', '#34d81e', '#0e6629','#0d618f','#eb4e66'];
   
   // Helper: Get cookie value by name
   function getCookie(name) {
@@ -83,11 +83,27 @@ const months = [
       } else {
         const color = colors[colorIndex - 1];
         day.style.backgroundColor = color;
+        day.style.color = '#fff';
         setCookie(id, color);
       }
   
       day.dataset.colorIndex = colorIndex;
     });
+    if (day.style.backgroundColor !== '#ffffff') {
+      day.style.color = '#ffffff';
+    }
   });
   
+document.getElementById("instructionsButton").addEventListener("click", function() {
+    const instructions = document.getElementById("instructions");
+    if (instructions.style.display === "none") {
+        instructions.style.display = "block";
+    } else {
+        instructions.style.display = "none";
+    }
+});
+
+document.getElementById("instructions").addEventListener("click", function() {
+  instructions.style.display = "none";
+});
   
