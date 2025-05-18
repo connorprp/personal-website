@@ -33,6 +33,8 @@ const months = [
       const day = document.createElement('div');
       day.className = 'day';
       day.title = `${month.name} ${i + 1} (Day ${dayCounter})`;
+      day.textContent = i + 1;
+      day.style.fontSize = '0.5em';
       dayCounter++;
       grid.appendChild(day);
     }
