@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    base: "/personal-site/",
+    base: "/personal-website/",
     build: {
         outDir: "docs",
         rollupOptions: {
