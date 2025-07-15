@@ -22,6 +22,7 @@ export default defineConfig({
                 certification5: resolve(__dirname, "certification5/index.html"),
                 landscape: resolve(__dirname, "landscape/index.html"),
                 daysbycolor: resolve(__dirname, "daysbycolor/index.html"),
+                quintessentials: resolve(__dirname, "quintessentials/index.html"),
             }
         }
     }
