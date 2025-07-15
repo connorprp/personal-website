@@ -15,6 +15,7 @@ body {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
+    z-index: 1000;
 }
 
 /* Links inside the navbar */
