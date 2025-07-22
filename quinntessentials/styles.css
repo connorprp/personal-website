@@ -27,12 +27,14 @@
         width: 20%;
         height: auto;
     }
-
     .header-content {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+        background-image: url("../images/bracelets1.jpg");
+        }
+
+        
 
      .logo {
         max-width: 20%;
