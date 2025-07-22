@@ -23,6 +23,7 @@ export default defineConfig({
                 landscape: resolve(__dirname, "landscape/index.html"),
                 daysbycolor: resolve(__dirname, "daysbycolor/index.html"),
                 quintessentials: resolve(__dirname, "quinntessentials/index.html"),
+                practice: resolve(__dirname, "practice/index.html"),
             }
         }
     }
