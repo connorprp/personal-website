@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";const e=document.getElementById("imageMask");document.body.onmousemove=t=>{e.style.display="block";const{clientX:c,clientY:o}=t;e.style.clipPath=`circle(5% at ${c}px ${o}px)`};

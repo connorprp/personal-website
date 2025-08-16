@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css                */document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault(),document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})})});
